@@ -250,6 +250,14 @@ footer svg:hover{
     .item-resultado h2 {
         font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
     }
+
+    .sidebar {
+        display: none;
+    }
+    
+    .sidebar2 {
+        display: none;
+    }
 }
 
 /* Responsividade para celulares */
@@ -280,5 +288,13 @@ footer svg:hover{
 
     footer {
         font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
+    }
+
+    .sidebar {
+        display: none;
+    }
+    
+    .sidebar2 {
+        display: none;
     }
 }
