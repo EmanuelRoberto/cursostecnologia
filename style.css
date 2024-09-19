@@ -258,6 +258,14 @@ footer svg:hover{
     .sidebar2 {
         display: none;
     }
+
+    .svggithub{
+        display: none;
+    }
+
+    .svglinkedin{
+        display: none;
+    }
 }
 
 /* Responsividade para celulares */
@@ -295,6 +303,14 @@ footer svg:hover{
     }
     
     .sidebar2 {
+        display: none;
+    }
+
+    .svggithub{
+        display: none;
+    }
+
+    .svglinkedin{
         display: none;
     }
 }
