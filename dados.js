@@ -58,5 +58,5 @@ let dados = [
         descricao: "O GitHub é uma plataforma online que serve como um repositório para projetos de código-fonte. Ele utiliza o sistema de controle de versão Git para permitir que desenvolvedores colaborem em projetos, acompanhem as mudanças no código e mantenham um histórico completo do desenvolvimento.",
         link: "https://www.youtube.com/watch?v=2c7yWlpWDJM&list=PLcoYAcR89n-qbO7YAVj5S0alABLis_QVU",
         certificado : "",
-    }
+    },
 ];

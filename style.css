@@ -1,11 +1,10 @@
-/* Importa a fonte Chakra Petch do Google Fonts */
+/* Importa a fonte Chakra Petch no Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/* Estiliza o corpo da página */
-body {
+body{
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #DDDDDD; /* Cor de fundo da página */
-    display: flex; /* Usa Flexbox para layout */
+    background-color: #24387d; /* cor de background */
+    display: flex; /* Usa Flexbox para o layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
     justify-content: center; /* Centraliza os itens verticalmente */
@@ -14,55 +13,49 @@ body {
     padding: 0; /* Remove o padding padrão */
 }
 
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
 /* Estiliza os títulos h1 */
-h1 {
-    font-size: 2.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
+h1{
+    color: #d3f350; /* Cor do texto */
+    font-size: 3rem; /* Tamanho da font */
     text-align: center; /* Alinha o texto ao centro */
-    letter-spacing: 0.4rem; /* Espaçamento entre letras */
+    margin-bottom: 1rem; /* Espaçamento abaixo do h1 */
+}
+
+/* Definições da logotipo */
+img{
+    width: 15rem; /* tamanho da imagem */
+    margin-bottom: -5rem; /* Define a distancia da logotipo para o h1 */
+    display: flex; /* Usa flexbox para layout */
 }
 
 /* Estiliza as seções da página */
-section {
+section{
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
-}
-
-/* Estiliza os inputs dentro das seções */
-section input {
-    width: 30rem; /* Largura dos inputs */
-    border: none; /* Remove a borda padrão */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 1.5rem; /* Borda arredondada */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
-    color: #45474B; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+    margin-bottom: 2rem; /* Espaçamento abaixo de cada seção */
 }
 
 /* Estiliza os botões dentro das seções */
-section button {
-    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #30475E; /* Cor de fundo do botão */
-    color: #F5F7F8; /* Cor do texto do botão */
-    font-size: 1rem; /* Tamanho da fonte */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+section input{
+    width: 35rem; /* Largura dos inputs */
+    border: none; /* remove a borda padrão */
+    padding: 1.2rem; /* Espaçamento interno */
+    border-radius: 2rem; /* Borda arredondada */
+    margin-bottom: 0rem; /* Espaçamento abaixo dos inputs */
+    color: #24387d; /* Cor do texto */
+    background-color: #d3f350 ; /* Cor do fundo */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    border: none; /* Retira a borda o input */
+    outline: none; /* Retira a linha ao redor do input */
+    font-size: 1.2rem; /* Tamanho da fonte */
 }
 
-/* Adiciona efeito hover ao botão de pesquisa */
-section button:hover {
-    background-color: #30475E; /* Muda a cor de fundo ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
-    transform: scale(1.10);
-    transition: 0.5s ease;
-}
 
 /* Estiliza a caixa de resultados da pesquisa */
-.resultados-pesquisa {
+.resultados-pesquisa{
     width: 60rem; /* Largura máxima da caixa de resultados */
     height: 46vh; /* Altura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
@@ -73,53 +66,170 @@ section button:hover {
 
 /* Estiliza cada item de resultado */
 .item-resultado {
-    background: #FFFFFF; /* Cor de fundo dos itens */
+    background: #d3f350; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
+.item-resultado::-webkit-scrollbar {
+    width: 10px; /* Largura da barra */
+}
+
+.item-resultado::-webkit-scrollbar-thumb {
+    background: #007bff; /* Cor da barra */
+    border-radius: 10px; /* Borda arredondada */
+}
+
 /* Estiliza os títulos dentro dos itens de resultado */
-.item-resultado h2 {
+.item-resultado h2{
     font-size: 1.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
+    color: #24387d; /* Cor do texto */
 }
 
 /* Estiliza os links dentro dos itens de resultado */
-.item-resultado a {
+.item-resultado a{
     text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor do texto dos links */
+    color: #24387d; /* Cor do texto dos links */
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
-.item-resultado a:hover {
+.item-resultado a:hover{
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
 /* Estiliza a descrição meta dentro dos itens de resultado */
-.descricao-meta {
-    color: #45474B; /* Cor do texto */
+.descricao-meta{
+    color: #24387d; /* Cor do texto */
     margin: 0.5rem 0; /* Margem acima e abaixo */
 }
 
-/* Estiliza o rodapé da página */
-footer {
-    background-color: #F5F7F8; /* Cor de fundo do rodapé */
-    color: #45474B; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    padding: 0; /* Espaçamento interno */
-    width: 100%; /* Largura total da página */
-    position: absolute; /* Posiciona o rodapé */
-    bottom: 0; /* Alinha ao fundo da página */
+/* Estiliza o texto de certificado */
+.certificado{
     font-size: 1rem; /* Tamanho da fonte */
+    color: #24387d; /* Cor do texto */
+    font-weight: bold; /* Grossura da fonte */
 }
 
-.certificado{
-    font-size: 1rem;
-    color: #475466;
-    font-weight: bold;
+.container {
+    margin: 0 auto;
 }
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+.novidadesleft {
+    width: 15rem;
+    background-color: #d3f350;
+    padding: 0.4rem 0.2rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 1rem;
+    color: #00438b;
+    margin-bottom: 2rem;
+}
+
+.novidades-linhas{
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight:  bold;
+}
+
+.novidades-linhasa{
+    text-decoration: none;
+}
+
+.novidades-linhasa:hover{
+    text-decoration: underline;
+}
+
+.novidades-linhas:hover{
+    transform: scale(1.10);
+    transition: 0.5s ease;
+}
+
+.sidebar {
+    position: fixed;
+    top: 7rem;
+    left: 3rem;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+.ultimodiaright {
+    width: 15rem;
+    background-color: #d3f350;
+    padding: 0.4rem 0.2rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 1rem;
+    color: #00438b;
+    margin-bottom: 2rem;
+}
+
+.ultimodia-linhas{
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight:  bold;
+}
+
+.ultimodia-linhasa{
+    text-decoration: none;
+}
+
+.ultimodia-linhasa:hover{
+    text-decoration: underline;
+}
+
+.ultimodia-linhas:hover{
+    transform: scale(1.10);
+    transition: 0.5s ease;
+}
+
+.sidebar2 {
+    position: fixed;
+    top: 7rem;
+    right: 3rem;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+footer {
+    background: linear-gradient(to right, #007bff, #00438b);
+    color: #d3f350;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+}
+
+.svggithub svg{
+    float: left;
+    fill: #d3f350;
+    position: absolute;
+    bottom: 1.5rem; /* Ajuste a distância da borda inferior */
+    left: 4rem; /* Ajuste a distância da borda direita */
+    padding: 0;
+    margin: 0;
+}
+
+.svglinkedin svg{
+    float: left;
+    fill: #d3f350;
+    position: absolute;
+    bottom: 1.5rem; /* Ajuste a distância da borda inferior */
+    left: 8rem; /* Ajuste a distância da borda direita */
+    padding: 0;
+    margin: 0;
+}
+
+footer svg:hover{
+    transform: scale(1.15);
+    transition: 0.5s ease;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 @media (max-width: 768px) {
     h1 {

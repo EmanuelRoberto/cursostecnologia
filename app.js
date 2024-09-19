@@ -1,14 +1,19 @@
-// função pesquisar()
-//   Descrição: Essa função é responsável por realizar uma pesquisa e exibir os resultados na página.
-//   Quando chamada, ela:
-//   1. Seleciona a seção HTML onde os resultados serão inseridos.
-//   2. Itera sobre um array de dados (assumindo que 'dados' seja um array definido anteriormente).
-//   3. Para cada dado, cria um elemento HTML para exibir o título, link e descrição.
-//   4. Adiciona os elementos criados à seção de resultados.
+const formulario = document.getElementById('meuFormulario');
+const section = document.getElementById("resultados-pesquisa");
+
+const campoPesquisa = document.getElementById('campo-pesquisa');
+let timeout;
+
+campoPesquisa.addEventListener('input', () => {
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    pesquisar(campoPesquisa.value);
+  }, 500);
+});
 
 function pesquisar(textoPesquisa){
 
-    // // Converte o texto de pesquisa para minúsculas
+    // Converte o texto de pesquisa para minúsculas
     // textoPesquisa = textoPesquisa.toLowerCase();
 
     // Seleciona a seção HTML onde os resultados serão exibidos.
@@ -16,19 +21,11 @@ function pesquisar(textoPesquisa){
 
     let campoPesquisa = document.getElementById("campo-pesquisa").value;
 
-    //se campoPesquisa não for encontrado
+    //se campoPesquisa não estiver preenchido ele não mostra resultado
     if (!campoPesquisa){
-        section.innerHTML = "Nenhum curso foi encontrado"
+        section.innerHTML = "";
         return 
     }
-
-    // Verifica se o campo de pesquisa está vazio após remover espaços em branco
-    // Se estiver vazio, exibe uma mensagem informando que nenhum curso foi encontrado
-    // e interrompe a execução da função. OPCIONAL!!
-    // if (campoPesquisa.trim() === "") {
-    //     section.innerHTML = "Nenhum curso foi encontrado";
-    //     return;
-    // }
 
     campoPesquisa = campoPesquisa.toLowerCase()
 
@@ -56,10 +53,11 @@ function pesquisar(textoPesquisa){
         }
             
     }
-
     
     if (!resultados) {
-        resultados = "Nenhum curso foi encontrado";
+        // resultados = "Nenhum curso foi encontrado";
+        // adiciona uma tag com uma cor para a resposta "Nenhum curso foi encontrado"
+        resultados = '<span style="color: #ecf844;">Nenhum curso foi encontrado.</span>';
     }
         
     // Atualiza o conteúdo HTML da seção de resultados com os elementos criados.
