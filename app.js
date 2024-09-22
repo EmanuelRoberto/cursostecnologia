@@ -24,13 +24,13 @@ function pesquisar(textoPesquisa){
     //se campoPesquisa não estiver preenchido ele não mostra resultado
     if (!campoPesquisa){
         section.innerHTML = "";
-        return 
+        return
     }
 
     campoPesquisa = campoPesquisa.toLowerCase()
 
     // Inicializa uma string vazia para armazenar os resultados da pesquisa.
-    let resultados = ""
+    let resultados = "";
     let titulo = "";
     let descricao = "";
 
